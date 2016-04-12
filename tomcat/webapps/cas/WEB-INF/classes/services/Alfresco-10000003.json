@@ -5,7 +5,8 @@
   "id" : 10000003,
   "description" : "GED Alfresco.",
   "proxyPolicy" : {
-    "@class" : "org.jasig.cas.services.RefuseRegisteredServiceProxyPolicy"
+    "@class" : "org.jasig.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
+    "pattern" : "^(http?|https?|imaps?)://.*"
   },
   "evaluationOrder" : 0,
   "usernameAttributeProvider" : {
