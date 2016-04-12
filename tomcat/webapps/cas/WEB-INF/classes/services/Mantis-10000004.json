@@ -1,0 +1,26 @@
+{
+  "@class" : "org.jasig.cas.services.RegexRegisteredService",
+  "serviceId" : "^http://support.core-techs.fr.*",
+  "name" : "Mantis",
+  "id" : 10000004,
+  "description" : "Système de bug tracking.",
+  "proxyPolicy" : {
+    "@class" : "org.jasig.cas.services.RefuseRegisteredServiceProxyPolicy"
+  },
+  "evaluationOrder" : 0,
+  "usernameAttributeProvider" : {
+    "@class" : "org.jasig.cas.services.PrincipalAttributeRegisteredServiceUsernameProvider",
+    "usernameAttribute" : "uid"
+  },
+  "logoutType" : "BACK_CHANNEL",
+  "attributeReleasePolicy" : {
+    "@class" : "org.jasig.cas.services.ReturnAllAttributeReleasePolicy"
+  },
+  "accessStrategy" : {
+    "@class" : "com.adimeo.feder.cas.FederRegisteredServiceAccessStrategy",
+    "enabled" : true,
+    "ssoEnabled" : true,
+    "federUrl": "http://10.0.2.2:4500/service/user",
+    "identifier" : "mantis"
+  }
+}

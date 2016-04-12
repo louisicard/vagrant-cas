@@ -1,0 +1,5 @@
+tomcat/*.log
+tomcat/logs/*
+tomcat/temp/*
+tomcat/work/*
+.vagrant
