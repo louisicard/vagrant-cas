@@ -21,3 +21,6 @@ sudo tar -xzvf jdk-8u77-linux-x64.tar.gz
 sudo rm -f jdk-8u77-linux-x64.tar.gz
 sudo mv jdk* jdk
 #sudo /opt/jdk/bin/keytool -keyalg rsa -validity 365 -genkey -noprompt -alias tomcat -dname "CN=localhost, OU=IT, O=Adimeo, L=Louis, S=Sicard, C=FR" -keystore /opt/tomcat/tomcat_keystore -storepass secret -keypass secret
+
+sudo mkdir /opt/tomcat/logs
+sudo mkdir /opt/tomcat/work
