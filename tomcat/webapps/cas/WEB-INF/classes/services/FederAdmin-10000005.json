@@ -1,9 +1,9 @@
 {
   "@class" : "org.jasig.cas.services.RegexRegisteredService",
-  "serviceId" : "^http://.*/share.*",
-  "name" : "Alfresco",
-  "id" : 10000003,
-  "description" : "GED Alfresco.",
+  "serviceId" : "^http://localhost:4500.*",
+  "name" : "Feder",
+  "id" : 10000005,
+  "description" : "Feder",
   "proxyPolicy" : {
     "@class" : "org.jasig.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
     "pattern" : "^(http?|https?|imaps?)://.*"
@@ -22,6 +22,6 @@
     "enabled" : true,
     "ssoEnabled" : true,
     "federUrl": "http://10.0.2.2:4500/service/user",
-    "identifier" : "alfresco"
+    "identifier" : "feder"
   }
 }
