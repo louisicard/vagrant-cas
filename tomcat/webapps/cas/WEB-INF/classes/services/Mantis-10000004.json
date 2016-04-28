@@ -1,6 +1,6 @@
 {
   "@class" : "org.jasig.cas.services.RegexRegisteredService",
-  "serviceId" : "^http://support.core-techs.fr.*",
+  "serviceId" : "^http://localhost:4503.*",
   "name" : "Mantis",
   "id" : 10000004,
   "description" : "Système de bug tracking.",
