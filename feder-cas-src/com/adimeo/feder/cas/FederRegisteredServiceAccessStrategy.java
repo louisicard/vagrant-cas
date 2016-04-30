@@ -19,7 +19,7 @@ public class FederRegisteredServiceAccessStrategy extends DefaultRegisteredServi
 		if(attr.containsKey("uid")){
 			try{
 				access = Boolean.parseBoolean(this.getResponseFromUrl(this.getFederUrl()+  "/" + this.getIdentifier() + "/" + attr.get("uid")));
-			}catch(Exception ex){}
+			}catch(Exception ex){ex.printStackTrace();}
 		}
 		return this.isEnabled() && this.isSsoEnabled() && access;
 	}
