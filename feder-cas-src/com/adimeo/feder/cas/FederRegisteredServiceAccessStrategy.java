@@ -39,6 +39,7 @@ public class FederRegisteredServiceAccessStrategy extends DefaultRegisteredServi
 			return response.toString();
 		}
 		catch(Exception e){
+			e.printStackTrace();
 			return null;
 		}
 	}
