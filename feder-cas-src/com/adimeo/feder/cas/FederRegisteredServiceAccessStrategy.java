@@ -2,6 +2,7 @@ package com.adimeo.feder.cas;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
 
@@ -26,7 +27,9 @@ public class FederRegisteredServiceAccessStrategy extends DefaultRegisteredServi
 	private String getResponseFromUrl(String url){
 		try{
 			URL u = new URL(url);
-			BufferedReader reader = new BufferedReader(new InputStreamReader(u.openConnection().getInputStream()));
+			HttpURLConnection connection = (HttpURLConnection)u.openConnection();
+			TrustModifier.relaxHostChecking(connection);
+			BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 			StringBuilder response = new StringBuilder();
 			String inputLine;
 			while((inputLine = reader.readLine()) != null){
